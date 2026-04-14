@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fintech1000s — Stakeholder Business Flow Deck</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="meet-deck.css">
+</head>
+
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="slide-counter" id="slideCounter">1 / 21</div>
+  <nav class="nav-arrows">
+    <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">‹</button>
+    <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">›</button>
+  </nav>
+
+  <section class="slide active" id="slide-0">
+    <div class="slide-inner cover-slide">
+      <div class="cover-badge">STAKEHOLDER MEETING DECK</div>
+      <h1 class="cover-title">Fintech<span class="accent">1000s</span></h1>
+      <p class="cover-subtitle">Business Flow untuk Perpanjangan Tempo Pembayaran Merchant</p>
+      <div class="cover-divider"></div>
+      <p class="cover-desc">
+        Produk finansial pendukung Mitra1000s untuk membantu Merchant menjaga kelancaran pembayaran,
+        menjaga operasional belanja tetap berjalan, dan memberi Selling Agent kontrol limit yang terukur.
+      </p>
+      <div class="cover-meta">
+        <span class="meta-chip">Mitra1000s</span>
+        <span class="meta-chip">Fintech1000s</span>
+        <span class="meta-chip">Receivables Financing</span>
+        <span class="meta-chip">Stakeholder View</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-1">
+    <div class="slide-inner">
+      <div class="slide-label">KONTEKS BISNIS</div>
+      <h2>Mitra1000s dan Kebutuhan <span class="accent">Perpanjangan Tempo</span></h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Marketplace B2B Bahan Bangunan</h3>
+          <p>Mitra1000s adalah aplikasi utama tempat Merchant membeli stok bahan bangunan dari ekosistem Supplier
+            melalui Selling Agent dengan pola pembayaran tempo yang lazim di pasar.</p>
+          <p>Dalam praktiknya, Merchant sering menghadapi tekanan likuiditas jangka pendek ketika invoice mendekati
+            jatuh tempo tetapi hasil penjualan belum cair.</p>
+        </div>
+        <div class="panel emphasis">
+          <h3>Peran Fintech1000s</h3>
+          <p>Fintech1000s dikembangkan oleh <strong>PT. Mitra Seribu Saudara</strong> sebagai produk pendukung yang
+            memungkinkan Merchant memperpanjang tempo pembayaran atas invoice yang sudah terbentuk di Mitra1000s.</p>
+          <p>Tujuan utamanya adalah menjaga kelangsungan transaksi Merchant, memberi struktur pembiayaan yang lebih
+            rapi, dan tetap menjaga kendali risiko di sisi Selling Agent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-2">
+    <div class="slide-inner">
+      <div class="slide-label">AKTOR BISNIS</div>
+      <h2>Empat Aktor Utama dalam <span class="accent">Business Flow</span></h2>
+      <div class="entities-row">
+        <div class="entity-card ec-merchant">
+          <div class="entity-emoji">🏪</div>
+          <h3>Merchant</h3>
+          <p>Pembeli stok</p>
+          <div class="entity-detail">Bertransaksi di Mitra1000s dan menjadi pihak yang mengajukan perpanjangan tempo
+            melalui Fintech1000s.</div>
+        </div>
+        <div class="entity-arrow">→</div>
+        <div class="entity-card ec-agent">
+          <div class="entity-emoji">🏢</div>
+          <h3>Selling Agent</h3>
+          <p>Pemberi limit</p>
+          <div class="entity-detail">Mereview pengajuan non-whitelist, menetapkan limit kredit, dan menerima
+            settlement dari PT. MSS.</div>
+        </div>
+        <div class="entity-arrow">→</div>
+        <div class="entity-card ec-company">
+          <div class="entity-emoji">🏛️</div>
+          <h3>PT. MSS</h3>
+          <p>Pemilik platform</p>
+          <div class="entity-detail">Pemilik Mitra1000s dan Fintech1000s sekaligus pihak settlement/clearing dana
+            pembayaran VA.</div>
+        </div>
+        <div class="entity-arrow">→</div>
+        <div class="entity-card ec-supplier">
+          <div class="entity-emoji">🏭</div>
+          <h3>Supplier</h3>
+          <p>Pemasok barang</p>
+          <div class="entity-detail">Menentukan terms of payment awal di transaksi reguler dan menerima pembayaran dari
+            Selling Agent.</div>
+        </div>
+      </div>
+      <div class="money-flow">
+        <div class="mf-label">RINGKASAN ALUR UANG</div>
+        <div class="mf-chain">
+          <span class="mf-actor mf-mer">Merchant</span>
+          <span class="mf-arrow">bayar via VA ke</span>
+          <span class="mf-actor mf-co">PT. MSS</span>
+          <span class="mf-arrow">lalu settlement ke</span>
+          <span class="mf-actor mf-sa">Selling Agent</span>
+          <span class="mf-arrow">untuk kewajiban ke</span>
+          <span class="mf-actor mf-sup">Supplier</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-3">
+    <div class="slide-inner">
+      <div class="slide-label">GOVERNANCE INTERNAL</div>
+      <h2>Dua Aktor Internal yang Mengatur <span class="accent">Kontrol Fintech1000s</span></h2>
+      <div class="grid-2">
+        <div class="panel governance-card">
+          <div class="gov-head">
+            <span class="gov-icon">🧩</span>
+            <h3>Admin PT. MSS</h3>
+          </div>
+          <ul class="clean-list">
+            <li>Mengelola update bunga Fintech1000s.</li>
+            <li>Mengelola create, update, dan publish T&amp;C.</li>
+            <li>Mengunggah whitelist Merchant via file XLSX.</li>
+            <li>Menerima data merchant whitelist dari Selling Agent.</li>
+            <li>Menyiapkan file dengan kolom <code>merchant_id</code> dan <code>amount_limit_credit</code>.</li>
+          </ul>
+        </div>
+        <div class="panel governance-card alt">
+          <div class="gov-head">
+            <span class="gov-icon">✅</span>
+            <h3>Manager Operasional PT. MSS</h3>
+          </div>
+          <ul class="clean-list">
+            <li>Mereview proposal perubahan bunga dari Admin.</li>
+            <li>Mereview proposal create/update T&amp;C dari Admin.</li>
+            <li>Dapat <strong>approve</strong> atau <strong>reject</strong> setiap perubahan.</li>
+            <li>Perubahan bunga dan T&amp;C hanya berlaku setelah approval diberikan.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note-strip">
+        Governance dipisahkan dari business flow utama agar stakeholder bisa melihat bahwa Fintech1000s tidak hanya
+        punya alur pembiayaan, tetapi juga punya lapisan kontrol dan approval internal.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-4">
+    <div class="slide-inner">
+      <div class="slide-label">GOVERNANCE FLOW</div>
+      <h2>Alur Internal: Bunga, T&amp;C, dan <span class="accent">Whitelist Merchant</span></h2>
+      <div class="flow-stack">
+        <div class="flow-card flow-blue">
+          <div class="flow-title">1. Pengaturan Bunga</div>
+          <p>Admin mengusulkan perubahan bunga global Fintech1000s, mengirimkannya ke Manager Operasional, lalu bunga
+            baru hanya aktif setelah disetujui.</p>
+        </div>
+        <div class="flow-card flow-purple">
+          <div class="flow-title">2. Pengelolaan T&amp;C</div>
+          <p>Admin membuat atau memperbarui T&amp;C, mengirimkan versi tersebut untuk review approval, lalu
+            mempublish hanya jika statusnya sudah approved.</p>
+        </div>
+        <div class="flow-card flow-green">
+          <div class="flow-title">3. Upload Whitelist Merchant</div>
+          <p>Admin mengunggah file XLSX berisi <code>merchant_id</code> dan <code>amount_limit_credit</code>. Merchant
+            yang masuk whitelist akan auto-approve saat mengajukan pembukaan fasilitas kredit.</p>
+        </div>
+      </div>
+      <div class="xlsx-preview">
+        <div class="xlsx-head">
+          <div class="xlsx-title">Contoh Format XLSX Whitelist Merchant</div>
+          <div class="xlsx-subtitle">Kolom wajib: <code>merchant_id</code> dan <code>amount_limit_credit</code></div>
+        </div>
+        <table class="xlsx-table">
+          <thead>
+            <tr>
+              <th>merchant_id</th>
+              <th>amount_limit_credit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MRC-000123</td>
+              <td>60000000</td>
+            </tr>
+            <tr>
+              <td>MRC-000456</td>
+              <td>45000000</td>
+            </tr>
+            <tr>
+              <td>MRC-000789</td>
+              <td>100000000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-5">
+    <div class="slide-inner">
+      <div class="slide-label">ALUR REGULER</div>
+      <h2>Transaksi Normal Mitra1000s <span class="accent">Tanpa Keterlambatan</span></h2>
+      <div class="diagram-container" onclick="openZoom(this)">
+        <img src="alur_normal.png" alt="Alur Normal Mitra1000s">
+      </div>
+      <div class="summary-band">
+        Merchant membeli stok dengan tempo, pembayaran dilakukan tepat waktu via VA ke PT. MSS, lalu PT. MSS
+        melakukan settlement ke Selling Agent dan kewajiban ke Supplier terselesaikan sesuai alur reguler.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-6">
+    <div class="slide-inner">
+      <div class="slide-label">PAIN POINT</div>
+      <h2>Telat Bayar <span class="accent-red">Sebelum Ada Fintech1000s</span></h2>
+      <div class="diagram-container" onclick="openZoom(this)">
+        <img src="2.alur_tidak_normal.png" alt="Alur Tidak Normal Tanpa Fintech1000s">
+      </div>
+      <div class="grid-3 compact-grid">
+        <div class="mini-card">
+          <h3>Merchant Terganggu</h3>
+          <p>Akun Mitra1000s diblokir saat invoice jatuh tempo belum lunas.</p>
+        </div>
+        <div class="mini-card">
+          <h3>SA Menanggung Tekanan</h3>
+          <p>Selling Agent tetap perlu handle kewajiban pembayaran ke Supplier.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Penagihan Manual</h3>
+          <p>Setelah itu proses penagihan cenderung berpindah ke jalur manual/offline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-7">
+    <div class="slide-inner cover-slide">
+      <div class="cover-badge soft-blue">SOLUSI</div>
+      <h1 class="cover-title tighter">Fintech<span class="accent">1000s</span> sebagai Solusi</h1>
+      <div class="cover-divider"></div>
+      <p class="cover-desc wide">
+        Saat Merchant mengalami tekanan pembayaran di Mitra1000s, Fintech1000s memberi jalur perpanjangan tempo yang
+        terstruktur: mulai dari pembukaan fasilitas kredit, validasi limit, restrukturisasi invoice, hingga cicilan dan
+        pelunasan.
+      </p>
+      <div class="solution-steps">
+        <div class="ss-item">
+          <div class="ss-num">1</div>
+          <div class="ss-text">Merchant ajukan<br>fasilitas kredit</div>
+        </div>
+        <div class="ss-arrow">→</div>
+        <div class="ss-item">
+          <div class="ss-num">2</div>
+          <div class="ss-text">Whitelist auto-approve<br>atau SA review limit</div>
+        </div>
+        <div class="ss-arrow">→</div>
+        <div class="ss-item">
+          <div class="ss-num">3</div>
+          <div class="ss-text">Invoice INV-<br>direstrukturisasi jadi FIN-</div>
+        </div>
+        <div class="ss-arrow">→</div>
+        <div class="ss-item">
+          <div class="ss-num">4</div>
+          <div class="ss-text">Merchant cicil<br>dan limit pulih bertahap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-8">
+    <div class="slide-inner">
+      <div class="slide-label">PEMBUKAAN FASILITAS</div>
+      <h2>Pengajuan Fasilitas Kredit dan <span class="accent">Penetapan Limit</span></h2>
+      <div class="diagram-container" onclick="openZoom(this)">
+        <img src="pengajuan_akun.png" alt="Pengajuan Akun Kredit Fintech1000s">
+      </div>
+      <div class="grid-2 compact-grid">
+        <div class="mini-card">
+          <h3>Whitelist</h3>
+          <p>Jika Merchant sudah ada di whitelist, sistem dapat langsung mengaktifkan limit sesuai file upload Admin.
+          </p>
+        </div>
+        <div class="mini-card">
+          <h3>Non-Whitelist</h3>
+          <p>Jika tidak whitelist, Selling Agent melakukan review manual dan menetapkan limit kredit Merchant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-9">
+    <div class="slide-inner">
+      <div class="slide-label">RESTRUKTURISASI</div>
+      <h2>Invoice <span class="accent">INV-</span> Berubah Menjadi <span class="accent-orange">FIN-</span></h2>
+      <div class="panel large-panel">
+        <div class="timeline-grid">
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <h3>Invoice Reguler</h3>
+            <p>Merchant memiliki invoice prefix <strong>INV-</strong> di Mitra1000s yang mendekati atau sudah masuk
+              jatuh tempo.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <h3>Pengajuan Perpanjangan</h3>
+            <p>Merchant mengajukan perpanjangan tempo melalui Fintech1000s untuk invoice tersebut.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <h3>Validasi Limit</h3>
+            <p>Sistem mengecek apakah sisa limit aktif mencukupi nominal tagihan yang diajukan.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <h3>Restrukturisasi</h3>
+            <p>Jika limit cukup, invoice <strong>INV-</strong> dianggap diselesaikan oleh fintech dan sistem membuat
+              invoice restrukturisasi baru dengan prefix <strong>FIN-</strong>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="note-strip">
+        Dengan model ini, Fintech1000s tidak mengubah histori transaksi awal, tetapi mengambil alih skema pembayaran
+        lanjutan melalui invoice restrukturisasi.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-10">
+    <div class="slide-inner">
+      <div class="slide-label">VALIDASI LIMIT</div>
+      <h2>Jika Limit Tidak Cukup, Merchant Wajib <span class="accent-orange">Bayar Selisih Dulu</span></h2>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Contoh Kasus</h3>
+          <p>Merchant memiliki sisa limit aktif <strong>Rp 20 Juta</strong>, sementara invoice yang ingin
+            diperpanjang bernilai <strong>Rp 50 Juta</strong>.</p>
+          <p>Artinya terdapat kekurangan limit <strong>Rp 30 Juta</strong> yang harus ditutup terlebih dahulu.</p>
+        </div>
+        <div class="panel emphasis">
+          <h3>Konsekuensi Bisnis</h3>
+          <p>Merchant perlu melakukan pembayaran parsial agar nilai tagihan yang tersisa masuk ke dalam batas limit
+            aktif.</p>
+          <p>Setelah selisih tersebut dibayarkan dan limit kembali mencukupi, pengajuan perpanjangan dapat diproses
+            ulang dan sistem bisa auto-approve.</p>
+        </div>
+      </div>
+      <div class="summary-band">
+        Mekanisme ini menjaga fleksibilitas Merchant tanpa melepas disiplin limit kredit yang telah ditetapkan Selling
+        Agent.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-11">
+    <div class="slide-inner">
+      <div class="slide-label">REFERENSI TAMPILAN</div>
+      <h2>Tampilan Invoice <span class="accent">Sebelum dan Sesudah</span> Perpanjangan</h2>
+      <div class="grid-2 compact-grid scroll-area">
+        <div class="panel invoice-panel">
+          <div class="invoice-head">
+            <span class="invoice-chip">MITRA1000S</span>
+            <span class="invoice-caption">Sebelum Perpanjangan</span>
+          </div>
+          <div class="invoice-body">
+            <div class="invoice-id invoice-id-plain">INV/202601/0108</div>
+            <div class="invoice-ref">ORD/202604/0015</div>
+            <div class="invoice-name">INTI TRIO BHAKTI JAYA, PT - TBP</div>
+            <hr class="invoice-line">
+            <div class="invoice-row"><span>Total Belanja</span><span>Rp 540,000</span></div>
+            <div class="invoice-row"><span>Sisa Tagihan</span><span>Rp 540,000</span></div>
+            <div class="invoice-row"><span>Nominal Bayar</span><span>Rp 540,000</span></div>
+            <div class="invoice-row"><span class="text-green">Cashback Bayar Cepat</span><span class="text-green">- Rp
+                3,406</span></div>
+          </div>
+        </div>
+        <div class="panel invoice-panel fintech">
+          <div class="invoice-head fintech-head">
+            <span class="invoice-chip fintech-chip">FINTECH1000S</span>
+            <span class="invoice-caption">Sesudah Perpanjangan</span>
+          </div>
+          <div class="invoice-body">
+            <div class="invoice-id">FIN/202601/0108</div>
+            <div class="invoice-ref">Ref: INV/202601/0108</div>
+            <div class="invoice-ref">ORD/202604/0015</div>
+            <div class="invoice-name">INTI TRIO BHAKTI JAYA, PT - TBP</div>
+            <hr class="invoice-line fintech-line">
+            <div class="invoice-row"><span>Pokok Pinjaman Awal</span><span>Rp 540,000</span></div>
+            <div class="invoice-row"><span>Sisa Pokok Pinjaman</span><span class="text-orange">Rp 200,000</span></div>
+            <div class="invoice-row"><span>Bunga Terakumulasi</span><span class="text-red">Rp 4,050 <small>(Minggu
+                  ke-1)</small></span></div>
+            <div class="invoice-row"><span>Due Date</span><span>24 Feb 2026</span></div>
+            <div class="invoice-actions">
+              <button class="invoice-btn invoice-btn-green">Cicil Pokok</button>
+              <button class="invoice-btn invoice-btn-blue">Lunasi Tagihan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="note-strip">
+        Slide ini memperlihatkan perubahan bentuk invoice dari invoice reguler <code>INV-</code> di Mitra1000s menjadi
+        invoice restrukturisasi <code>FIN-</code> di Fintech1000s setelah perpanjangan tempo disetujui.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-12">
+    <div class="slide-inner">
+      <div class="slide-label">END-TO-END FLOW</div>
+      <h2>Dari Order Reguler sampai <span class="accent">Cicilan dan Pelunasan</span></h2>
+      <div class="diagram-container" onclick="openZoom(this)">
+        <img src="end_to_end.png" alt="End-to-End Fintech1000s">
+      </div>
+      <div class="summary-band">
+        Alur ini menggambarkan perjalanan lengkap Merchant: order di Mitra1000s, telat bayar, pembukaan fasilitas,
+        pembayaran parsial jika diperlukan, restrukturisasi ke FIN-, lalu cicilan hingga lunas.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-13">
+    <div class="slide-inner">
+      <div class="slide-label">ATURAN SISTEM</div>
+      <h2>Konvensi Penting dan <span class="accent">Catatan Bisnis</span></h2>
+      <div class="flow-stack scroll-area">
+        <div class="flow-card flow-blue">
+          <div class="flow-title">Konvensi Invoice</div>
+          <p><code>INV-</code> adalah invoice reguler Mitra1000s yang masih dapat diperpanjang melalui Fintech1000s.
+            <code>FIN-</code> adalah invoice restrukturisasi hasil perpanjangan dan tidak dapat diperpanjang kembali.
+          </p>
+        </div>
+        <div class="flow-card flow-purple">
+          <div class="flow-title">Rate Bunga dan Tenor</div>
+          <p>Bunga default berjalan <strong>0.25% per minggu</strong> dari sisa pokok. Batas maksimum restrukturisasi
+            adalah <strong>56 hari atau 8 minggu</strong>. Lewat H+56, akun masuk status blokir dan NPL, dan bunga 0.25%
+            tetap berjalan.</p>
+        </div>
+        <div class="flow-card">
+          <div class="flow-title">Implikasi untuk Stakeholder</div>
+          <p>Aturan ini menegaskan bahwa Fintech1000s dirancang fleksibel untuk membantu Merchant, tetapi tetap memiliki
+            guardrail risiko yang jelas untuk PT. MSS dan Selling Agent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-14">
+    <div class="slide-inner">
+      <div class="slide-label">SIMULASI BUNGA</div>
+      <h2>Empat Skenario untuk Melihat <span class="accent">Dampak Skema Pembayaran</span></h2>
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-icon">1</div>
+          <h3>Tanpa Skip, Bunga di Akhir</h3>
+          <p>Pokok dicicil rutin, bunga direkam dari sisa pokok mingguan dan dibayar akumulatif saat pelunasan akhir.
+          </p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">2</div>
+          <h3>Tanpa Skip, Pay-as-you-go</h3>
+          <p>Bunga dibayar bersamaan dengan cicilan pokok di setiap pembayaran sehingga beban Merchant terasa lebih
+            ringan dan tagihan lebih stateless.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">3</div>
+          <h3>Dengan Skip, Bunga di Akhir</h3>
+          <p>Saat ada minggu yang bolong, akumulasi bunga membesar karena pokok tertahan lebih lama di saldo berjalan.
+          </p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">4</div>
+          <h3>Dengan Skip, Pay-as-you-go</h3>
+          <p>Jika Merchant bolong bayar, bunga tidak direkam sebagai utang tersendiri, tetapi Merchant terkena rate
+            eskalasi saat kembali membayar.</p>
+        </div>
+      </div>
+      <div class="note-strip">
+        Untuk meeting stakeholder, slide ini menekankan bahwa kedua pendekatan tetap bisa menjaga nilai ekonomi bagi
+        Selling Agent, hanya cara pengalaman pembayaran Merchant yang berbeda.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-15">
+    <div class="slide-inner">
+      <div class="slide-label">SKEMA BUNGA</div>
+      <h2>Rate Increment: <span class="accent">0.25% per 7 Hari</span></h2>
+      <div class="interest-grid">
+        <div class="int-card">
+          <div class="int-days">7</div>
+          <div class="int-lbl">HARI (M1)</div>
+          <div class="int-rate">0.25%</div>
+        </div>
+        <div class="int-card">
+          <div class="int-days">14</div>
+          <div class="int-lbl">HARI (M2)</div>
+          <div class="int-rate">0.50%</div>
+        </div>
+        <div class="int-card">
+          <div class="int-days">21</div>
+          <div class="int-lbl">HARI (M3)</div>
+          <div class="int-rate">0.75%</div>
+        </div>
+        <div class="int-card">
+          <div class="int-days">28</div>
+          <div class="int-lbl">HARI (M4)</div>
+          <div class="int-rate">1.00%</div>
+        </div>
+        <div class="int-card">
+          <div class="int-days">35</div>
+          <div class="int-lbl">HARI (M5)</div>
+          <div class="int-rate">1.25%</div>
+        </div>
+        <div class="int-card">
+          <div class="int-days">42</div>
+          <div class="int-lbl">HARI (M6)</div>
+          <div class="int-rate">1.50%</div>
+        </div>
+        <div class="int-card">
+          <div class="int-days">49</div>
+          <div class="int-lbl">HARI (M7)</div>
+          <div class="int-rate">1.75%</div>
+        </div>
+        <div class="int-card">
+          <div class="int-days">56</div>
+          <div class="int-lbl">HARI (M8)</div>
+          <div class="int-rate">2.00%</div>
+        </div>
+      </div>
+      <div class="int-rules">
+        <div class="int-rule"><span class="ir-icon">📐</span><span>Bunga default dihitung dari <strong>sisa pokok
+              utang</strong> pada minggu tersebut.</span></div>
+        <div class="int-rule"><span class="ir-icon">🌟</span><span>Pada opsi pay-as-you-go, bunga dibayar bersama
+            <strong>pokok yang dibayar saat itu</strong>.</span></div>
+        <div class="int-rule"><span class="ir-icon">📅</span><span>Maksimum fleksibilitas restrukturisasi adalah
+            <strong>56 hari</strong> selama limit kredit tersedia.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-16">
+    <div class="slide-inner">
+      <div class="slide-label">SKENARIO 1 (TANPA SKIP)</div>
+      <h2>Tepat Waktu — <span class="accent">Skema Pertama</span> (Kumulatif Akhir)</h2>
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Minggu</th>
+            <th>Sisa Pokok Awal</th>
+            <th>Cicilan Pokok</th>
+            <th>Sisa Pokok Baru</th>
+            <th>Bunga Direkam Sistem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="week-badge">1</span></td>
+            <td>Rp 100.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 67.000.000</td>
+            <td class="text-orange">Rp 250.000</td>
+          </tr>
+          <tr>
+            <td><span class="week-badge">2</span></td>
+            <td>Rp 67.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 34.000.000</td>
+            <td class="text-orange">Rp 167.500</td>
+          </tr>
+          <tr>
+            <td><span class="week-badge">3</span></td>
+            <td>Rp 34.000.000</td>
+            <td class="text-bold">Rp 24.000.000</td>
+            <td>Rp 10.000.000</td>
+            <td class="text-orange">Rp 85.000</td>
+          </tr>
+          <tr class="row-final" style="background: rgba(34,197,94,0.12)">
+            <td><span class="week-badge wb-green">4</span></td>
+            <td class="text-bold">Rp 10.000.000</td>
+            <td class="text-bold text-green">Rp 10.000.000 (Pelunasan Akhir)</td>
+            <td class="text-bold text-green">LUNAS</td>
+            <td class="text-orange">Rp 25.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-summary" style="margin-top: 15px;">
+        <div class="cs-item cs-green" style="padding: 14px 18px">
+          <div class="cs-label">Total Payment di M-4 (Pelunasan Sekaligus)</div>
+          <div class="cs-value text-green">Rp 10 Jt + Rp 527.500 = Rp 10.527.500</div>
+        </div>
+      </div>
+      <div class="calc-note">Pokok dilunasi dan bunga akumulatif dibayarkan bersama di akhir.</div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-17">
+    <div class="slide-inner">
+      <div class="slide-label">SKENARIO 2 (TANPA SKIP)</div>
+      <h2>Tepat Waktu — <span class="accent-orange">Skema Kedua</span> (Pay-as-you-go)</h2>
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Minggu (Rate)</th>
+            <th>Niat Cicil Pokok</th>
+            <th>Bunga Langsung Lunas</th>
+            <th>Total Tagihan VA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M-1 (0.25%)</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 82.500</td>
+            <td class="text-bold text-green">Rp 33.082.500</td>
+          </tr>
+          <tr>
+            <td>M-2 (0.50%)</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 165.000</td>
+            <td class="text-bold text-green">Rp 33.165.000</td>
+          </tr>
+          <tr>
+            <td>M-3 (0.75%)</td>
+            <td>Rp 24.000.000</td>
+            <td class="text-orange">Rp 180.000</td>
+            <td class="text-bold text-green">Rp 24.180.000</td>
+          </tr>
+          <tr class="row-final">
+            <td>M-4 (1.00%)</td>
+            <td>Rp 10.000.000</td>
+            <td class="text-orange">Rp 100.000</td>
+            <td class="text-bold text-green">Rp 10.100.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-note" style="margin-top:20px; font-size:0.9rem">Total bunga tetap setara, tetapi pengalaman
+        bayar Merchant terasa lebih ringan karena bunga tidak menumpuk di akhir.</div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-18">
+    <div class="slide-inner">
+      <div class="slide-label">SKENARIO 3 (DENGAN SKIP)</div>
+      <h2>Bolong Cicilan — <span class="accent">Skema Pertama</span> (Kumulatif Akhir)</h2>
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Minggu</th>
+            <th>Sisa Pokok Awal</th>
+            <th>Cicilan Pokok</th>
+            <th>Sisa Pokok Baru</th>
+            <th>Bunga Terekam</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="week-badge">1</span></td>
+            <td>Rp 100.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 67.000.000</td>
+            <td class="text-orange">Rp 250.000</td>
+          </tr>
+          <tr style="background: rgba(239,68,68,0.06);">
+            <td><span class="week-badge" style="background: #ef4444; color:white">2</span></td>
+            <td>Rp 67.000.000</td>
+            <td class="text-bold text-red">Rp 0 (SKIP)</td>
+            <td class="text-red">Rp 67.000.000</td>
+            <td class="text-orange">Rp 167.500</td>
+          </tr>
+          <tr>
+            <td><span class="week-badge">3</span></td>
+            <td>Rp 67.000.000</td>
+            <td class="text-bold">Rp 33.000.000</td>
+            <td>Rp 34.000.000</td>
+            <td class="text-orange">Rp 167.500</td>
+          </tr>
+          <tr class="row-final" style="background: rgba(34,197,94,0.12)">
+            <td><span class="week-badge wb-green">4</span></td>
+            <td class="text-bold">Rp 34.000.000</td>
+            <td class="text-bold text-green">Rp 34.000.000 (Pelunasan Akhir)</td>
+            <td class="text-bold text-green">LUNAS</td>
+            <td class="text-orange">Rp 85.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-summary" style="margin-top: 15px;">
+        <div class="cs-item cs-green" style="padding: 14px 18px">
+          <div class="cs-label">Total Payment di M-4</div>
+          <div class="cs-value text-green">Rp 34 Jt + Rp 670.000 = Rp 34.670.000</div>
+        </div>
+      </div>
+      <div class="calc-note">Saat ada minggu yang bolong, bunga mengendap dan membesar di pelunasan akhir.</div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-19">
+    <div class="slide-inner">
+      <div class="slide-label">SKENARIO 4 (DENGAN SKIP)</div>
+      <h2>Bolong Cicilan — <span class="accent-orange">Skema Kedua</span> (Pay-as-you-go)</h2>
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Minggu (Rate)</th>
+            <th>Niat Cicil Pokok</th>
+            <th>Bunga Langsung Lunas</th>
+            <th>Total Tagihan VA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M-1 (0.25%)</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 82.500</td>
+            <td class="text-bold text-green">Rp 33.082.500</td>
+          </tr>
+          <tr style="background: rgba(239,68,68,0.06);">
+            <td>M-2 (0.50%)</td>
+            <td class="text-bold text-red">Rp 0 (SKIP)</td>
+            <td class="text-orange">Rp 0</td>
+            <td class="text-bold text-green">Rp 0</td>
+          </tr>
+          <tr>
+            <td>M-3 (0.75%)</td>
+            <td>Rp 33.000.000</td>
+            <td class="text-orange">Rp 247.500</td>
+            <td class="text-bold text-green">Rp 33.247.500</td>
+          </tr>
+          <tr class="row-final">
+            <td>M-4 (1.00%)</td>
+            <td>Rp 34.000.000</td>
+            <td class="text-orange">Rp 340.000</td>
+            <td class="text-bold text-green">Rp 34.340.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="calc-note" style="margin-top:20px; font-size:0.9rem">Jika Merchant skip bayar, hukuman terjadi lewat
+        kenaikan rate saat pembayaran berikutnya, bukan lewat penumpukan utang bunga terpisah.</div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-20">
+    <div class="slide-inner cover-slide">
+      <div class="cover-badge">KEY TAKEAWAYS</div>
+      <h1 class="cover-title tighter">Business Flow<br><span class="accent">Fintech1000s</span></h1>
+      <div class="cover-divider"></div>
+      <div class="closing-grid">
+        <div class="cg-item">
+          <div class="cg-num">6</div>
+          <div class="cg-label">Aktor terpetakan jelas</div>
+        </div>
+        <div class="cg-item">
+          <div class="cg-num">2</div>
+          <div class="cg-label">Layer: governance &amp; business</div>
+        </div>
+        <div class="cg-item">
+          <div class="cg-num">INV→FIN</div>
+          <div class="cg-label">Restrukturisasi invoice</div>
+        </div>
+        <div class="cg-item">
+          <div class="cg-num">PT. MSS</div>
+          <div class="cg-label">Settlement layer</div>
+        </div>
+      </div>
+      <p class="cover-desc wide">
+        Fintech1000s diposisikan sebagai solusi business flow yang menjaga operasional Merchant, memberi kontrol limit
+        pada Selling Agent, dan menyediakan governance internal yang jelas di bawah PT. MSS.
+      </p>
+      <p class="cover-footer">Fintech1000s — Stakeholder Business Flow Deck</p>
+    </div>
+  </section>
+
+  <div class="zoom-overlay" id="zoomOverlay">
+    <div class="zoom-controls">
+      <button class="zoom-btn" onclick="zoomOut(event)">−</button>
+      <button class="zoom-btn" onclick="zoomReset(event)">1:1</button>
+      <button class="zoom-btn" onclick="zoomIn(event)">+</button>
+    </div>
+    <button class="zoom-close" onclick="closeZoom()">✕</button>
+    <div class="zoom-content" id="zoomContent"></div>
+    <div class="zoom-hint">Klik di luar diagram atau tekan Esc untuk menutup. Drag untuk navigasi.</div>
+  </div>
+
+  <script src="meet-deck.js"></script>
+</body>
+
+</html>
