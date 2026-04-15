@@ -346,6 +346,72 @@ code { font-family: inherit; color: var(--accent-light); }
 .flow-purple { border-color: rgba(168, 85, 247, 0.24); }
 .flow-green { border-color: rgba(34, 197, 94, 0.24); }
 
+.sa-decision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.sa-card {
+  background: rgba(17, 28, 45, 0.84);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+}
+
+.sa-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.sa-badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .4px;
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-light);
+}
+
+.sa-badge.alt {
+  background: rgba(168, 85, 247, 0.14);
+  color: #d8b4fe;
+}
+
+.sa-badge.outline {
+  background: transparent;
+  border: 1px solid rgba(34, 197, 94, 0.24);
+  color: #86efac;
+}
+
+.sa-badge.outline.free {
+  border-color: rgba(245, 158, 11, 0.26);
+  color: #fcd34d;
+}
+
+.sa-card h3 {
+  font-size: .95rem;
+  margin-bottom: 8px;
+}
+
+.sa-card p {
+  font-size: .84rem;
+  color: var(--text2);
+}
+
+.sa-mini-note {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: .76rem;
+  color: var(--text3);
+}
+
 .xlsx-preview {
   margin-top: 16px;
   border-radius: 14px;
@@ -830,7 +896,7 @@ code { font-family: inherit; color: var(--accent-light); }
   .cover-title { font-size: 2.8rem; }
   .cover-title.tighter { font-size: 2.5rem; }
   h2 { font-size: 1.55rem; }
-  .grid-2, .grid-3, .rules-grid, .timeline-grid { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .rules-grid, .timeline-grid, .sa-decision-grid { grid-template-columns: 1fr; }
   .interest-grid { grid-template-columns: repeat(4, 1fr); }
   .entities-row, .money-visual, .solution-steps { flex-direction: column; }
   .entity-arrow, .ss-arrow { transform: rotate(90deg); padding: 8px 0; }
